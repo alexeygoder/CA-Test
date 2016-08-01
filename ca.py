@@ -20,11 +20,11 @@ def inst_with_dep(x,flag=True):
         for y in dep[x]:
             inst_with_dep(y,False)
             
-        if x in inst:
-            if flag: print x,' is already installed.'
-        else: 
-            inst.append(x)
-            print 'Installing ',x
+    if x in inst:
+        if flag: print x,' is already installed.'
+    else: 
+        inst.append(x)
+        print 'Installing ',x
 
         
 def install_cmd(l):
